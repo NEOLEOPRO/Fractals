@@ -1,11 +1,11 @@
-import pygame
 from turtle import *
-instruction = ['l', 'f', 'r', 'f', 'l']
+
+
 def movement(iterations=1, actions=None, length=None):
     if not actions:
         actions = ['f']
     if not length:
-        length = 800 / 2 ** (iterations/2)
+        length = 950 / 2 ** (iterations/2)
     for i in actions:
         if i == 'f':
             if iterations != 0:
@@ -17,6 +17,8 @@ def movement(iterations=1, actions=None, length=None):
         elif i == 'r':
             right(90)
 
+
+instruction = ['l', 'f', 'r', 'f', 'l']
 speed(0), tracer(0, 0)
 movement(16)#увеличивать опасно
 update()
